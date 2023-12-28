@@ -5,11 +5,11 @@ import java.util.List;
 
 public class Computer {
 
-    private String cpu;
+    public String cpu;
 
-    private List<Memory> ram = new ArrayList<>();
+    public List<Memory> ram = new ArrayList<>();
 
-    private List<Storage> storage = new ArrayList<>();
+    public List<Storage> storage = new ArrayList<>();
 
     public Computer() {
         System.out.println("Computer 객체 생성");
@@ -19,12 +19,12 @@ public class Computer {
     public String toString() {
         return "Computer{" +
                 "cpu='" + cpu + '\'' +
-                ", ram=" + ram +
-                ", storage=" + storage +
+                ", ram=" + getSizeMemory() +
+                ", storage=" + getSizeStorage() +
                 '}';
     }
 
-    public int memory() {
+    public int getSizeMemory() {
 
         int size = 0;
 
@@ -35,7 +35,7 @@ public class Computer {
         return size;
     }
 
-    public int storage() {
+    public int getSizeStorage() {
         int size = 0;
 
         for (Storage storage : storage){
